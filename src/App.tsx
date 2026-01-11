@@ -390,7 +390,7 @@ function App() {
 
         {/* ProgressBar */}
         <Section title="ProgressBar">
-          <div className="space-y-6 max-w-md">
+          <div className="space-y-24 max-w-md">
             <SubSection label="25% - Label Right">
               <ProgressBar value={25} label="right" />
             </SubSection>
