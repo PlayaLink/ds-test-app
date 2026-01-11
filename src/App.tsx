@@ -83,7 +83,7 @@ function App() {
               size="md"
               onPress={() => setDropdownOpen(!dropdownOpen)}
             >
-              <span className="flex items-center gap-3">
+              <span className="flex items-center gap-6">
                 <DotStatus appearance={brands.find(b => b.id === selectedTheme)?.dotAppearance} />
                 {brands.find(b => b.id === selectedTheme)?.label}
                 <svg
