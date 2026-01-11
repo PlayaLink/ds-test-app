@@ -294,7 +294,7 @@ function App() {
 
         {/* Toggle */}
         <Section title="Toggle">
-          <div className="flex flex-wrap items-center gap-8">
+          <div className="flex flex-wrap items-center gap-24">
             <div className="flex items-center gap-4">
               <Toggle isSelected={toggleOn} onChange={setToggleOn} />
               <span className="text-sm">{toggleOn ? 'On' : 'Off'}</span>
@@ -319,7 +319,7 @@ function App() {
         {/* CounterBadge */}
         <Section title="CounterBadge">
           <SubSection label="Colors">
-            <div className="flex flex-wrap items-center gap-6">
+            <div className="flex flex-wrap items-center gap-10">
               <CounterBadge>5</CounterBadge>
               <CounterBadge color="red">12</CounterBadge>
               <CounterBadge color="orange">8</CounterBadge>
@@ -329,7 +329,7 @@ function App() {
             </div>
           </SubSection>
           <SubSection label="Solid & Rounded">
-            <div className="flex flex-wrap items-center gap-6">
+            <div className="flex flex-wrap items-center gap-10">
               <CounterBadge color="blue" isSolid>15</CounterBadge>
               <CounterBadge color="green" isRounded>7</CounterBadge>
               <CounterBadge color="red" isSolid isRounded>3</CounterBadge>
