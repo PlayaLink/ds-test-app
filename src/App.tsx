@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react'
 import './App.css'
 import {
   Avatar,
+  Branding,
   Button,
   Chip,
   Radio,
@@ -25,12 +26,12 @@ import {
 } from '@oxymormon/chg-unified-ds'
 
 const brands = [
-  { id: 'weatherby', label: 'Weatherby', dotAppearance: 'magenta' as const },
-  { id: 'comphealth', label: 'CompHealth', dotAppearance: 'purple' as const },
-  { id: 'connect', label: 'Connect', dotAppearance: 'blue' as const },
-  { id: 'locumsmart', label: 'LocumSmart', dotAppearance: 'cyan' as const },
-  { id: 'modio', label: 'Modio', dotAppearance: 'sky' as const },
-  { id: 'wireframe', label: 'Wireframe', dotAppearance: 'neutral' as const },
+  { id: 'weatherby', label: 'Weatherby', dotAppearance: 'magenta' as const, brandingId: 'myweatherby' as const },
+  { id: 'comphealth', label: 'CompHealth', dotAppearance: 'purple' as const, brandingId: 'mycomphealth' as const },
+  { id: 'connect', label: 'Connect', dotAppearance: 'blue' as const, brandingId: 'connect' as const },
+  { id: 'locumsmart', label: 'LocumSmart', dotAppearance: 'cyan' as const, brandingId: 'locumsmart' as const },
+  { id: 'modio', label: 'Modio', dotAppearance: 'sky' as const, brandingId: 'modio' as const },
+  { id: 'wireframe', label: 'Wireframe', dotAppearance: 'neutral' as const, brandingId: 'wireframe' as const },
 ]
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
@@ -74,9 +75,12 @@ function App() {
   return (
     <div data-theme={selectedTheme} className="min-h-screen bg-surface-primary text-content-primary">
       {/* Header with Theme Switcher */}
-      <header className="sticky top-0 z-50 bg-surface-secondary shadow-sm">
-        <div className="mx-auto max-w-5xl px-6 py-4 flex items-center justify-between">
-          <h1 className="text-xl font-semibold">CHG Unified Design System</h1>
+      <header className="sticky top-0 z-50 bg-white shadow-md isolate">
+        <div className="mx-auto max-w-5xl px-6 py-16 flex items-center justify-between">
+          <div className="flex items-center gap-32">
+            <h1 className="text-3xl font-semibold">CHG Unified Design System</h1>
+            <Branding brand={brands.find(b => b.id === selectedTheme)?.brandingId || 'wireframe'} size="sm" />
+          </div>
           <div ref={dropdownRef} className="relative">
             <Button
               variant="outline"
