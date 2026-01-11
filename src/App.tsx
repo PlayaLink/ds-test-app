@@ -186,6 +186,7 @@ function App() {
 
         {/* Avatar */}
         <Section title="Avatar">
+          <div className="space-y-24 mt-16">
           <SubSection label="Sizes">
             <div className="flex flex-wrap items-end gap-6">
               <Avatar name="John Doe" size="sm" />
@@ -204,12 +205,14 @@ function App() {
           <SubSection label="With Image">
             <Avatar name="Grace Lee" size="lg" src="https://i.pravatar.cc/150?u=grace" />
           </SubSection>
+          </div>
         </Section>
 
         <Divider />
 
         {/* Button */}
         <Section title="Button">
+          <div className="space-y-24 mt-16">
           <SubSection label="Variants">
             <div className="flex flex-wrap items-center gap-6">
               <Button variant="primary">Primary</Button>
@@ -234,13 +237,14 @@ function App() {
               <Button variant="outline" isDisabled>Disabled Outline</Button>
             </div>
           </SubSection>
+          </div>
         </Section>
 
         <Divider />
 
         {/* Tooltip */}
         <Section title="Tooltip">
-          <div className="flex flex-wrap items-center gap-6">
+          <div className="flex flex-wrap items-center gap-6 mt-16">
             <TooltipTrigger tooltip="This is a plain tooltip" appearance="plain">
               <Button variant="outline" size="sm">Plain</Button>
             </TooltipTrigger>
@@ -263,7 +267,7 @@ function App() {
 
         {/* Chip */}
         <Section title="Chip">
-          <div className="flex flex-wrap items-center gap-8">
+          <div className="flex flex-wrap items-center gap-8 mt-16">
             <Chip>Default</Chip>
             <Chip isSelected={chipSelected} onPress={() => setChipSelected(!chipSelected)}>
               {chipSelected ? 'Selected' : 'Click to Select'}
@@ -278,7 +282,7 @@ function App() {
 
         {/* Radio/RadioGroup */}
         <Section title="Radio / RadioGroup">
-          <div className="max-w-sm">
+          <div className="max-w-sm mt-16">
             <RadioGroup value={radioValue} onChange={setRadioValue}>
               <div className="flex flex-col gap-3">
                 <Radio value="option1">Option 1 - Basic plan</Radio>
@@ -294,7 +298,7 @@ function App() {
 
         {/* Toggle */}
         <Section title="Toggle">
-          <div className="flex flex-wrap items-center gap-24">
+          <div className="flex flex-wrap items-center gap-24 mt-16">
             <div className="flex items-center gap-4">
               <Toggle isSelected={toggleOn} onChange={setToggleOn} />
               <span className="text-sm">{toggleOn ? 'On' : 'Off'}</span>
@@ -318,6 +322,7 @@ function App() {
 
         {/* CounterBadge */}
         <Section title="CounterBadge">
+          <div className="space-y-24 mt-16">
           <SubSection label="Colors">
             <div className="flex flex-wrap items-center gap-10">
               <CounterBadge>5</CounterBadge>
@@ -335,12 +340,14 @@ function App() {
               <CounterBadge color="red" isSolid isRounded>3</CounterBadge>
             </div>
           </SubSection>
+          </div>
         </Section>
 
         <Divider />
 
         {/* Tag */}
         <Section title="Tag">
+          <div className="space-y-24 mt-16">
           <SubSection label="Colors">
             <div className="flex flex-wrap items-center gap-6">
               <Tag color="neutral">Neutral</Tag>
@@ -367,13 +374,14 @@ function App() {
               <Tag color="cyan" size="compact">Compact</Tag>
             </div>
           </SubSection>
+          </div>
         </Section>
 
         <Divider />
 
         {/* Divider */}
         <Section title="Divider">
-          <div className="space-y-8 max-w-lg">
+          <div className="space-y-24 mt-16 max-w-lg">
             <SubSection label="Default">
               <Divider />
             </SubSection>
@@ -390,17 +398,17 @@ function App() {
 
         {/* ProgressBar */}
         <Section title="ProgressBar">
-          <div className="space-y-24 max-w-md">
-            <SubSection label="25% - Label Right">
+          <div className="space-y-24 mt-16 max-w-md">
+            <SubSection label="Label Right">
               <ProgressBar value={25} label="right" />
             </SubSection>
-            <SubSection label="50% - Label Bottom">
+            <SubSection label="Label Bottom">
               <ProgressBar value={50} label="bottom" />
             </SubSection>
-            <SubSection label="75% - No Label">
+            <SubSection label="No Label">
               <ProgressBar value={75} label={false} />
             </SubSection>
-            <SubSection label="100% Complete">
+            <SubSection label="Complete">
               <ProgressBar value={100} label="right" />
             </SubSection>
           </div>
@@ -410,31 +418,33 @@ function App() {
 
         {/* StepIndicator */}
         <Section title="StepIndicator">
-          <SubSection label="Horizontal">
-            <StepIndicator orientation="horizontal" showLabels>
-              <StepIndicator.Item status="complete" label="Account Setup" />
-              <StepIndicator.Item status="complete" label="Profile Info" />
-              <StepIndicator.Item status="active" label="Preferences" />
-              <StepIndicator.Item status="incomplete" label="Review" />
-            </StepIndicator>
-          </SubSection>
-          <SubSection label="Vertical">
-            <div className="max-w-xs">
-              <StepIndicator orientation="vertical" showLabels>
-                <StepIndicator.Item status="complete" label="Order Placed" description="Jan 10, 2024" />
-                <StepIndicator.Item status="complete" label="Processing" description="Jan 11, 2024" />
-                <StepIndicator.Item status="active" label="Shipped" description="In transit" />
-                <StepIndicator.Item status="incomplete" label="Delivered" />
+          <div className="space-y-24 mt-16">
+            <SubSection label="Horizontal">
+              <StepIndicator orientation="horizontal" showLabels>
+                <StepIndicator.Item status="complete" label="Account Setup" />
+                <StepIndicator.Item status="complete" label="Profile Info" />
+                <StepIndicator.Item status="active" label="Preferences" />
+                <StepIndicator.Item status="incomplete" label="Review" />
               </StepIndicator>
-            </div>
-          </SubSection>
+            </SubSection>
+            <SubSection label="Vertical">
+              <div className="max-w-xs">
+                <StepIndicator orientation="vertical" showLabels>
+                  <StepIndicator.Item status="complete" label="Order Placed" description="Jan 10, 2024" />
+                  <StepIndicator.Item status="complete" label="Processing" description="Jan 11, 2024" />
+                  <StepIndicator.Item status="active" label="Shipped" description="In transit" />
+                  <StepIndicator.Item status="incomplete" label="Delivered" />
+                </StepIndicator>
+              </div>
+            </SubSection>
+          </div>
         </Section>
 
         <Divider />
 
         {/* DotStatus */}
         <Section title="DotStatus">
-          <div className="flex flex-wrap items-center gap-24">
+          <div className="flex flex-wrap items-center gap-24 mt-16">
             <div className="flex items-center gap-2">
               <DotStatus appearance="green" />
               <span className="text-sm">Online</span>
@@ -466,30 +476,32 @@ function App() {
 
         {/* Status */}
         <Section title="Status">
-          <SubSection label="Default">
-            <div className="flex flex-wrap items-center gap-6">
-              <Status appearance="green">Active</Status>
-              <Status appearance="red">Error</Status>
-              <Status appearance="yellow">Pending</Status>
-              <Status appearance="blue">Info</Status>
-              <Status appearance="purple">Review</Status>
-            </div>
-          </SubSection>
-          <SubSection label="Solid & Rounded">
-            <div className="flex flex-wrap items-center gap-6">
-              <Status appearance="green" isSolid>Solid</Status>
-              <Status appearance="red" isRounded>Rounded</Status>
-              <Status appearance="blue" isSolid isRounded>Both</Status>
-              <Status appearance="orange" size="compact">Compact</Status>
-            </div>
-          </SubSection>
+          <div className="space-y-24 mt-16">
+            <SubSection label="Default">
+              <div className="flex flex-wrap items-center gap-6">
+                <Status appearance="green">Active</Status>
+                <Status appearance="red">Error</Status>
+                <Status appearance="yellow">Pending</Status>
+                <Status appearance="blue">Info</Status>
+                <Status appearance="purple">Review</Status>
+              </div>
+            </SubSection>
+            <SubSection label="Solid & Rounded">
+              <div className="flex flex-wrap items-center gap-6">
+                <Status appearance="green" isSolid>Solid</Status>
+                <Status appearance="red" isRounded>Rounded</Status>
+                <Status appearance="blue" isSolid isRounded>Both</Status>
+                <Status appearance="orange" size="compact">Compact</Status>
+              </div>
+            </SubSection>
+          </div>
         </Section>
 
         <Divider />
 
         {/* Field */}
         <Section title="Field">
-          <div className="grid gap-8 max-w-xl">
+          <div className="grid gap-24 mt-16 max-w-xl">
             <Field label="Email Address" isRequired helperText="We'll never share your email.">
               <input
                 type="email"
@@ -518,33 +530,35 @@ function App() {
 
         {/* Tabs */}
         <Section title="Tabs">
-          <SubSection label="Underline">
-            <Tabs
-              appearance="underline"
-              items={[
-                { id: 'overview', label: 'Overview', content: <p className="py-4 text-content-secondary">Overview content - General information about the product.</p> },
-                { id: 'features', label: 'Features', content: <p className="py-4 text-content-secondary">Features content - List of all available features.</p> },
-                { id: 'pricing', label: 'Pricing', content: <p className="py-4 text-content-secondary">Pricing content - Various pricing plans and options.</p> },
-              ]}
-            />
-          </SubSection>
-          <SubSection label="Block">
-            <Tabs
-              appearance="block"
-              items={[
-                { id: 'tab1', label: 'Tab One', content: <p className="py-4 text-content-secondary">First tab content.</p> },
-                { id: 'tab2', label: 'Tab Two', content: <p className="py-4 text-content-secondary">Second tab content.</p> },
-                { id: 'tab3', label: 'Tab Three', content: <p className="py-4 text-content-secondary">Third tab content.</p> },
-              ]}
-            />
-          </SubSection>
+          <div className="space-y-24 mt-16">
+            <SubSection label="Underline">
+              <Tabs
+                appearance="underline"
+                items={[
+                  { id: 'overview', label: 'Overview', content: <p className="py-4 text-content-secondary">Overview content - General information about the product.</p> },
+                  { id: 'features', label: 'Features', content: <p className="py-4 text-content-secondary">Features content - List of all available features.</p> },
+                  { id: 'pricing', label: 'Pricing', content: <p className="py-4 text-content-secondary">Pricing content - Various pricing plans and options.</p> },
+                ]}
+              />
+            </SubSection>
+            <SubSection label="Block">
+              <Tabs
+                appearance="block"
+                items={[
+                  { id: 'tab1', label: 'Tab One', content: <p className="py-4 text-content-secondary">First tab content.</p> },
+                  { id: 'tab2', label: 'Tab Two', content: <p className="py-4 text-content-secondary">Second tab content.</p> },
+                  { id: 'tab3', label: 'Tab Three', content: <p className="py-4 text-content-secondary">Third tab content.</p> },
+                ]}
+              />
+            </SubSection>
+          </div>
         </Section>
 
         <Divider />
 
         {/* Toast */}
         <Section title="Toast">
-          <div className="space-y-4 max-w-lg">
+          <div className="space-y-24 mt-16 max-w-lg">
             <Toast
               title="Changes saved successfully"
               description="Your profile has been updated with the new information."
@@ -586,7 +600,7 @@ function App() {
 
         {/* Accordion */}
         <Section title="Accordion">
-          <div className="max-w-xl">
+          <div className="max-w-xl mt-16">
             <Accordion allowsMultipleExpanded>
               <AccordionItem title="What is this design system?">
                 <p className="text-sm text-content-secondary leading-relaxed px-16">
@@ -617,7 +631,7 @@ function App() {
 
         {/* ActionMenu */}
         <Section title="ActionMenu">
-          <div className="max-w-xs">
+          <div className="max-w-xs mt-16">
             <ActionMenu onItemClick={(value) => console.log('Clicked:', value)}>
               <ActionMenu.Item value="edit">Edit</ActionMenu.Item>
               <ActionMenu.Item value="duplicate">Duplicate</ActionMenu.Item>
