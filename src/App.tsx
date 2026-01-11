@@ -29,16 +29,18 @@ type Theme = typeof themes[number]
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <section className="space-y-6">
+    <section className="space-y-8">
       <h2 className="text-lg font-semibold text-content-primary">{title}</h2>
-      {children}
+      <div className="space-y-8">
+        {children}
+      </div>
     </section>
   )
 }
 
 function SubSection({ label, children }: { label?: string; children: React.ReactNode }) {
   return (
-    <div className="space-y-3">
+    <div className="space-y-4">
       {label && <p className="text-sm font-medium text-content-secondary">{label}</p>}
       {children}
     </div>
@@ -79,14 +81,14 @@ function App() {
         {/* Avatar */}
         <Section title="Avatar">
           <SubSection label="Sizes">
-            <div className="flex flex-wrap items-end gap-4">
+            <div className="flex flex-wrap items-end gap-6">
               <Avatar name="John Doe" size="sm" />
               <Avatar name="Jane Smith" size="md" />
               <Avatar name="Bob Wilson" size="lg" />
             </div>
           </SubSection>
           <SubSection label="With Status">
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap items-center gap-6">
               <Avatar name="Alice Brown" size="md" status="online" />
               <Avatar name="Charlie Davis" size="md" status="busy" />
               <Avatar name="Eve Johnson" size="md" status="away" />
@@ -103,7 +105,7 @@ function App() {
         {/* Button */}
         <Section title="Button">
           <SubSection label="Variants">
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="flex flex-wrap items-center gap-6">
               <Button variant="primary">Primary</Button>
               <Button variant="soft">Soft</Button>
               <Button variant="outline">Outline</Button>
@@ -113,7 +115,7 @@ function App() {
             </div>
           </SubSection>
           <SubSection label="Sizes">
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="flex flex-wrap items-center gap-6">
               <Button variant="primary" size="xs">Extra Small</Button>
               <Button variant="primary" size="sm">Small</Button>
               <Button variant="primary" size="md">Medium</Button>
@@ -121,7 +123,7 @@ function App() {
             </div>
           </SubSection>
           <SubSection label="Disabled">
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="flex flex-wrap items-center gap-6">
               <Button variant="primary" isDisabled>Disabled Primary</Button>
               <Button variant="outline" isDisabled>Disabled Outline</Button>
             </div>
@@ -130,9 +132,32 @@ function App() {
 
         <Divider />
 
+        {/* Tooltip */}
+        <Section title="Tooltip">
+          <div className="flex flex-wrap items-center gap-6">
+            <TooltipTrigger tooltip="This is a plain tooltip" appearance="plain">
+              <Button variant="outline" size="sm">Plain</Button>
+            </TooltipTrigger>
+            <TooltipTrigger tooltip="This is a soft tooltip" appearance="soft">
+              <Button variant="outline" size="sm">Soft</Button>
+            </TooltipTrigger>
+            <TooltipTrigger tooltip="This is a rich tooltip" appearance="rich">
+              <Button variant="outline" size="sm">Rich</Button>
+            </TooltipTrigger>
+            <TooltipTrigger tooltip="Micro" appearance="micro">
+              <Button variant="outline" size="sm">Micro</Button>
+            </TooltipTrigger>
+            <TooltipTrigger tooltip="With arrow pointing to trigger" showArrow>
+              <Button variant="outline" size="sm">With Arrow</Button>
+            </TooltipTrigger>
+          </div>
+        </Section>
+
+        <Divider />
+
         {/* Chip */}
         <Section title="Chip">
-          <div className="flex flex-wrap items-center gap-3">
+          <div className="flex flex-wrap items-center gap-6">
             <Chip>Default</Chip>
             <Chip isSelected={chipSelected} onPress={() => setChipSelected(!chipSelected)}>
               {chipSelected ? 'Selected' : 'Click to Select'}
@@ -163,7 +188,7 @@ function App() {
 
         {/* Toggle */}
         <Section title="Toggle">
-          <div className="flex flex-wrap items-center gap-8">
+          <div className="flex flex-wrap items-center gap-6">
             <div className="flex items-center gap-3">
               <Toggle isSelected={toggleOn} onChange={setToggleOn} />
               <span className="text-sm">{toggleOn ? 'On' : 'Off'}</span>
@@ -185,33 +210,10 @@ function App() {
 
         <Divider />
 
-        {/* Tooltip */}
-        <Section title="Tooltip">
-          <div className="flex flex-wrap items-center gap-3">
-            <TooltipTrigger tooltip="This is a plain tooltip" appearance="plain">
-              <Button variant="outline" size="sm">Plain</Button>
-            </TooltipTrigger>
-            <TooltipTrigger tooltip="This is a soft tooltip" appearance="soft">
-              <Button variant="outline" size="sm">Soft</Button>
-            </TooltipTrigger>
-            <TooltipTrigger tooltip="This is a rich tooltip" appearance="rich">
-              <Button variant="outline" size="sm">Rich</Button>
-            </TooltipTrigger>
-            <TooltipTrigger tooltip="Micro" appearance="micro">
-              <Button variant="outline" size="sm">Micro</Button>
-            </TooltipTrigger>
-            <TooltipTrigger tooltip="With arrow pointing to trigger" showArrow>
-              <Button variant="outline" size="sm">With Arrow</Button>
-            </TooltipTrigger>
-          </div>
-        </Section>
-
-        <Divider />
-
         {/* CounterBadge */}
         <Section title="CounterBadge">
           <SubSection label="Colors">
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap items-center gap-6">
               <CounterBadge>5</CounterBadge>
               <CounterBadge color="red">12</CounterBadge>
               <CounterBadge color="orange">8</CounterBadge>
@@ -221,7 +223,7 @@ function App() {
             </div>
           </SubSection>
           <SubSection label="Solid & Rounded">
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap items-center gap-6">
               <CounterBadge color="blue" isSolid>15</CounterBadge>
               <CounterBadge color="green" isRounded>7</CounterBadge>
               <CounterBadge color="red" isSolid isRounded>3</CounterBadge>
@@ -234,7 +236,7 @@ function App() {
         {/* Tag */}
         <Section title="Tag">
           <SubSection label="Colors">
-            <div className="flex flex-wrap items-center gap-2">
+            <div className="flex flex-wrap items-center gap-6">
               <Tag color="neutral">Neutral</Tag>
               <Tag color="red">Red</Tag>
               <Tag color="orange">Orange</Tag>
@@ -246,14 +248,14 @@ function App() {
             </div>
           </SubSection>
           <SubSection label="Solid">
-            <div className="flex flex-wrap items-center gap-2">
+            <div className="flex flex-wrap items-center gap-6">
               <Tag color="red" isSolid>Solid Red</Tag>
               <Tag color="green" isSolid>Solid Green</Tag>
               <Tag color="blue" isSolid>Solid Blue</Tag>
             </div>
           </SubSection>
           <SubSection label="Rounded">
-            <div className="flex flex-wrap items-center gap-2">
+            <div className="flex flex-wrap items-center gap-6">
               <Tag color="purple" isRounded>Rounded</Tag>
               <Tag color="orange" isSolid isRounded>Solid Rounded</Tag>
               <Tag color="cyan" size="compact">Compact</Tag>
@@ -359,7 +361,7 @@ function App() {
         {/* Status */}
         <Section title="Status">
           <SubSection label="Default">
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="flex flex-wrap items-center gap-6">
               <Status appearance="green">Active</Status>
               <Status appearance="red">Error</Status>
               <Status appearance="yellow">Pending</Status>
@@ -368,7 +370,7 @@ function App() {
             </div>
           </SubSection>
           <SubSection label="Solid & Rounded">
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="flex flex-wrap items-center gap-6">
               <Status appearance="green" isSolid>Solid</Status>
               <Status appearance="red" isRounded>Rounded</Status>
               <Status appearance="blue" isSolid isRounded>Both</Status>
@@ -402,14 +404,6 @@ function App() {
 
             <Field label="Bio" helperText="Tell us about yourself" showCounter currentCount={45} maxCount={200}>
               <Textarea placeholder="Write a short bio..." rows={3} />
-            </Field>
-
-            <Field orientation="horizontal" label="Username" infoText="Must be unique" showInfoIcon>
-              <input
-                type="text"
-                placeholder="johndoe"
-                className="w-full rounded-lg border border-border-primary bg-surface-primary px-3 py-2 text-sm placeholder:text-content-tertiary focus:outline-none focus:ring-2 focus:ring-interactive-primary"
-              />
             </Field>
           </div>
         </Section>
@@ -489,21 +483,21 @@ function App() {
           <div className="max-w-xl">
             <Accordion allowsMultipleExpanded>
               <AccordionItem title="What is this design system?">
-                <p className="text-sm text-content-secondary leading-relaxed">
+                <p className="text-sm text-content-secondary leading-relaxed px-16">
                   The CHG Unified Design System is a multi-brand design system built with React,
                   React Aria Components, and Tailwind CSS 4. It supports multiple brand themes
                   that can be switched dynamically.
                 </p>
               </AccordionItem>
               <AccordionItem title="How do I switch themes?">
-                <p className="text-sm text-content-secondary leading-relaxed">
+                <p className="text-sm text-content-secondary leading-relaxed px-16">
                   You can switch themes by setting the <code className="bg-surface-secondary px-1 py-0.5 rounded text-xs">data-theme</code> attribute on your
                   root element. Available themes include weatherby, comphealth, connect, locumsmart,
                   modio, and wireframe.
                 </p>
               </AccordionItem>
               <AccordionItem title="What components are available?">
-                <p className="text-sm text-content-secondary leading-relaxed">
+                <p className="text-sm text-content-secondary leading-relaxed px-16">
                   The design system includes Avatar, Button, Chip, Radio, Toggle, Tooltip,
                   CounterBadge, Tag, Divider, ProgressBar, StepIndicator, DotStatus, Status,
                   Field, Tabs, Toast, Accordion, and ActionMenu components.
