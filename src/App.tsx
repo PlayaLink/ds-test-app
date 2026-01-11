@@ -25,12 +25,12 @@ import {
 } from '@oxymormon/chg-unified-ds'
 
 const brands = [
-  { id: 'weatherby', label: 'Weatherby', color: '#a9174a' },
-  { id: 'comphealth', label: 'CompHealth', color: '#5e4775' },
-  { id: 'connect', label: 'Connect', color: '#0093d4' },
-  { id: 'locumsmart', label: 'LocumSmart', color: '#008dcf' },
-  { id: 'modio', label: 'Modio', color: '#2c91b6' },
-  { id: 'wireframe', label: 'Wireframe', color: '#818181' },
+  { id: 'weatherby', label: 'Weatherby', dotAppearance: 'magenta' as const },
+  { id: 'comphealth', label: 'CompHealth', dotAppearance: 'purple' as const },
+  { id: 'connect', label: 'Connect', dotAppearance: 'blue' as const },
+  { id: 'locumsmart', label: 'LocumSmart', dotAppearance: 'cyan' as const },
+  { id: 'modio', label: 'Modio', dotAppearance: 'sky' as const },
+  { id: 'wireframe', label: 'Wireframe', dotAppearance: 'neutral' as const },
 ]
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
@@ -83,11 +83,8 @@ function App() {
               size="md"
               onPress={() => setDropdownOpen(!dropdownOpen)}
             >
-              <span className="flex items-center gap-2">
-                <span
-                  className="size-3 rounded-full shrink-0"
-                  style={{ backgroundColor: brands.find(b => b.id === selectedTheme)?.color }}
-                />
+              <span className="flex items-center gap-6">
+                <DotStatus appearance={brands.find(b => b.id === selectedTheme)?.dotAppearance} />
                 {brands.find(b => b.id === selectedTheme)?.label}
                 <svg
                   className={`w-4 h-4 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`}
@@ -110,11 +107,8 @@ function App() {
               >
                 {brands.map((brand) => (
                   <ActionMenu.Item key={brand.id} value={brand.id}>
-                    <span className="flex items-center gap-3">
-                      <span
-                        className="size-3 rounded-full shrink-0"
-                        style={{ backgroundColor: brand.color }}
-                      />
+                    <span className="flex items-center gap-6">
+                      <DotStatus appearance={brand.dotAppearance} />
                       {brand.label}
                     </span>
                   </ActionMenu.Item>
