@@ -129,7 +129,7 @@ function App() {
         {/* About Section */}
         <section className="bg-gray-50 rounded-12 p-16 space-y-12">
           <p className="text-gray-700">
-            This site is built with fully functional React components powered by CHG's Unified Design System library in Figma.
+            This site is built with fully functional React components powered by CHG's <a href="https://www.figma.com/files/1034875891113199457/project/265020318/Unified-Design-System?fuid=1334211599582098160" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:underline">Unified Design System</a> library in Figma.
           </p>
           <p className="text-gray-700">
             The components have minimal dependencies (React Aria Components and Tailwind CSS 4). All colors and CSS styles are generated from our design tokens in Figma. 
