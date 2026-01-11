@@ -129,11 +129,12 @@ function App() {
         {/* About Section */}
         <section className="bg-gray-50 rounded-12 p-16 space-y-12">
           <p className="text-gray-700">
-            Design System Test is a web app built with components from the <strong>CHG Unified Design System</strong>,
-            a multi-brand React component library built with React Aria Components and Tailwind CSS 4.
+            THis is a web app built with components from the <strong>CHG Unified Design System</strong>,
+            a multi-brand component library built with React Aria Components and Tailwind CSS 4.
           </p>
+          <p className="text-gray-700">This code repository is powered by tokens from CHG's offical Unified Design System in Figma, with each design component connected</p>
           <p className="text-gray-700 pb-12">
-            All components you see below are imported from the NPM package <a href="https://www.npmjs.com/package/@oxymormon/chg-unified-ds" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:underline">@oxymormon/chg-unified-ds</a>.
+            All components you see below are imported from the NPM package <a href="https://www.npmjs.com/package/@oxymormon/chg-unified-ds" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:underline">@oxymormon/chg-unified-ds</a>, which pulls from the GitHub repo <a href="https://github.com/jordanchghealthcare/chg-unified-ds" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:underline">chg-unified-ds</a>. All components are fully documented in <a href="https://www.chg-unified-design.com/" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:underline">Storybook</a>.
           </p>
           <div className="flex flex-wrap gap-8">
             <Button
