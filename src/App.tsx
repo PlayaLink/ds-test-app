@@ -134,7 +134,7 @@ function App() {
           <p className="text-gray-700">
             The components have minimal dependencies (React Aria Components and Tailwind CSS 4). All colors and CSS styles are generated from our design tokens in Figma. 
           </p>
-          <p className="text-gray-700 pb-12">
+          <p className="text-gray-700 pb-8">
             The components you see below are imported from an NPM package, <a href="https://www.npmjs.com/package/@oxymormon/chg-unified-ds" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:underline">@oxymormon/chg-unified-ds</a>, which pulls from a GitHub repo, <a href="https://github.com/jordanchghealthcare/chg-unified-ds" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:underline">chg-unified-ds</a>. All components are fully documented in <a href="https://www.chg-unified-design.com/" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:underline">Storybook</a> and link back to Figma via Code Connect.
           </p>
           <div className="flex flex-wrap gap-8">
