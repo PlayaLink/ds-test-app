@@ -130,9 +130,8 @@ function App() {
         <section className="bg-gray-50 rounded-12 p-16 space-y-12">
           <p className="text-gray-700">
             THis is a web app built with components from the <strong>CHG Unified Design System</strong>,
-            a multi-brand component library built with React Aria Components and Tailwind CSS 4.
+            a multi-brand component library built with React Aria Components and Tailwind CSS 4 and powered by CHG's Unified Design System in Figma via Figma Code Connect.
           </p>
-          <p className="text-gray-700">This code repository is powered by tokens from CHG's offical Unified Design System in Figma, with each design component connected</p>
           <p className="text-gray-700 pb-12">
             All components you see below are imported from the NPM package <a href="https://www.npmjs.com/package/@oxymormon/chg-unified-ds" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:underline">@oxymormon/chg-unified-ds</a>, which pulls from the GitHub repo <a href="https://github.com/jordanchghealthcare/chg-unified-ds" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:underline">chg-unified-ds</a>. All components are fully documented in <a href="https://www.chg-unified-design.com/" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:underline">Storybook</a>.
           </p>
@@ -154,21 +153,7 @@ function App() {
             <Button
               variant="outline"
               size="sm"
-              href="https://www.npmjs.com/package/@oxymormon/chg-unified-ds"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span className="flex items-center gap-6">
-                <svg className="size-16" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M0 7.334v8h6.666v1.332H12v-1.332h12v-8H0zm6.666 6.664H5.334v-4H3.999v4H1.335V8.667h5.331v5.331zm4 0v1.336H8.001V8.667h5.334v5.332h-2.669v-.001zm12.001 0h-1.33v-4h-1.336v4h-1.335v-4h-1.33v4h-2.671V8.667h8.002v5.331zM10.665 10H12v2.667h-1.335V10z" />
-                </svg>
-                npm Package
-              </span>
-            </Button>
-            <Button
-              variant="outline"
-              size="sm"
-              href="https://chg-unified-ds.vercel.app/"
+              href="https://www.chg-unified-design.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -178,6 +163,20 @@ function App() {
                   <path fillRule="evenodd" clipRule="evenodd" d="M46.8 24.52c-1.16.88-9.76 1.48-9.76.23.18-4.78-2-4.99-3.21-4.99-1.15 0-3.09.34-3.09 2.9 0 2.61 2.83 4.08 6.16 5.81 4.72 2.45 10.44 5.43 10.44 12.9 0 7.17-5.94 11.13-13.51 11.13-7.82 0-14.65-3.1-13.88-13.85.3-1.26 10.24-.96 10.24 0-.12 4.44.92 5.74 3.52 5.74 2 0 2.91-1.08 2.91-2.9 0-2.75-2.95-4.38-6.35-6.25-4.6-2.53-10.01-5.51-10.01-12.35 0-6.82 4.79-11.37 13.33-11.37 8.55 0 13.21 4.48 13.21 13z" fill="white"/>
                 </svg>
                 Storybook
+              </span>
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              href="https://www.npmjs.com/package/@oxymormon/chg-unified-ds"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="flex items-center gap-6">
+                <svg className="size-16" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M0 7.334v8h6.666v1.332H12v-1.332h12v-8H0zm6.666 6.664H5.334v-4H3.999v4H1.335V8.667h5.331v5.331zm4 0v1.336H8.001V8.667h5.334v5.332h-2.669v-.001zm12.001 0h-1.33v-4h-1.336v4h-1.335v-4h-1.33v4h-2.671V8.667h8.002v5.331zM10.665 10H12v2.667h-1.335V10z" />
+                </svg>
+                npm Package
               </span>
             </Button>
           </div>
