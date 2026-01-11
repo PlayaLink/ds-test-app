@@ -157,7 +157,7 @@ function App() {
 
         {/* Chip */}
         <Section title="Chip">
-          <div className="flex flex-wrap items-center gap-6">
+          <div className="flex flex-wrap items-center gap-8">
             <Chip>Default</Chip>
             <Chip isSelected={chipSelected} onPress={() => setChipSelected(!chipSelected)}>
               {chipSelected ? 'Selected' : 'Click to Select'}
@@ -188,20 +188,20 @@ function App() {
 
         {/* Toggle */}
         <Section title="Toggle">
-          <div className="flex flex-wrap items-center gap-6">
-            <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-8">
+            <div className="flex items-center gap-4">
               <Toggle isSelected={toggleOn} onChange={setToggleOn} />
               <span className="text-sm">{toggleOn ? 'On' : 'Off'}</span>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-4">
               <Toggle size="compact" isSelected />
               <span className="text-sm">Compact</span>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-4">
               <Toggle isIndeterminate />
               <span className="text-sm">Indeterminate</span>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-4">
               <Toggle isDisabled />
               <span className="text-sm">Disabled</span>
             </div>
