@@ -124,7 +124,64 @@ function App() {
         </div>
       </header>
 
-      <main className="mx-auto max-w-5xl px-6 py-10 space-y-16">
+      <main className="mx-auto max-w-5xl px-6 pt-32 pb-10 space-y-32">
+
+        {/* About Section */}
+        <section className="bg-gray-50 rounded-12 p-16 space-y-12">
+          <p className="text-gray-700">
+            Design System Test is a web app built with components from the <strong>CHG Unified Design System</strong>,
+            a multi-brand React component library built with React Aria Components and Tailwind CSS 4.
+          </p>
+          <p className="text-gray-700 pb-12">
+            All components are imported from the <a href="https://www.npmjs.com/package/@oxymormon/chg-unified-ds" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:underline">@oxymormon/chg-unified-ds</a> NPM package and support runtime theme switching
+            via the <code className="bg-gray-200 px-4 py-2 rounded-4 text-sm">data-theme</code> attribute.
+          </p>
+          <div className="flex flex-wrap gap-8">
+            <Button
+              variant="primary"
+              size="sm"
+              href="https://github.com/jordanchghealthcare/chg-unified-ds"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="flex items-center gap-6">
+                <svg className="size-16" fill="currentColor" viewBox="0 0 24 24">
+                  <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z" />
+                </svg>
+                GitHub Repository
+              </span>
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              href="https://www.npmjs.com/package/@oxymormon/chg-unified-ds"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="flex items-center gap-6">
+                <svg className="size-16" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M0 7.334v8h6.666v1.332H12v-1.332h12v-8H0zm6.666 6.664H5.334v-4H3.999v4H1.335V8.667h5.331v5.331zm4 0v1.336H8.001V8.667h5.334v5.332h-2.669v-.001zm12.001 0h-1.33v-4h-1.336v4h-1.335v-4h-1.33v4h-2.671V8.667h8.002v5.331zM10.665 10H12v2.667h-1.335V10z" />
+                </svg>
+                npm Package
+              </span>
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              href="https://chg-unified-ds.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span className="flex items-center gap-6">
+                <svg className="size-16" viewBox="0 0 64 64" fill="none">
+                  <path d="M8.42 58.97L6.4 6.15c-.07-1.75 1.3-3.22 3.08-3.33L55.31.01c1.81-.11 3.37 1.24 3.48 3.01v57.76c0 1.78-1.47 3.22-3.28 3.22l-43.94-1.93c-1.7-.08-3.07-1.42-3.13-3.1z" fill="#FF4785"/>
+                  <path fillRule="evenodd" clipRule="evenodd" d="M46.8 24.52c-1.16.88-9.76 1.48-9.76.23.18-4.78-2-4.99-3.21-4.99-1.15 0-3.09.34-3.09 2.9 0 2.61 2.83 4.08 6.16 5.81 4.72 2.45 10.44 5.43 10.44 12.9 0 7.17-5.94 11.13-13.51 11.13-7.82 0-14.65-3.1-13.88-13.85.3-1.26 10.24-.96 10.24 0-.12 4.44.92 5.74 3.52 5.74 2 0 2.91-1.08 2.91-2.9 0-2.75-2.95-4.38-6.35-6.25-4.6-2.53-10.01-5.51-10.01-12.35 0-6.82 4.79-11.37 13.33-11.37 8.55 0 13.21 4.48 13.21 13z" fill="white"/>
+                </svg>
+                Storybook
+              </span>
+            </Button>
+          </div>
+        </section>
 
         {/* Avatar */}
         <Section title="Avatar">
