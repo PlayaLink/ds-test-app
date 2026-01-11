@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import './App.css'
 import {
   Avatar,
@@ -24,8 +24,14 @@ import {
   ActionMenu,
 } from '@oxymormon/chg-unified-ds'
 
-const themes = ['weatherby', 'comphealth', 'connect', 'locumsmart', 'modio', 'wireframe'] as const
-type Theme = typeof themes[number]
+const brands = [
+  { id: 'weatherby', label: 'Weatherby', color: '#a9174a' },
+  { id: 'comphealth', label: 'CompHealth', color: '#5e4775' },
+  { id: 'connect', label: 'Connect', color: '#0093d4' },
+  { id: 'locumsmart', label: 'LocumSmart', color: '#008dcf' },
+  { id: 'modio', label: 'Modio', color: '#2c91b6' },
+  { id: 'wireframe', label: 'Wireframe', color: '#818181' },
+]
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -48,30 +54,73 @@ function SubSection({ label, children }: { label?: string; children: React.React
 }
 
 function App() {
-  const [theme, setTheme] = useState<Theme>('weatherby')
+  const [selectedTheme, setSelectedTheme] = useState('weatherby')
+  const [dropdownOpen, setDropdownOpen] = useState(false)
   const [radioValue, setRadioValue] = useState('option1')
   const [toggleOn, setToggleOn] = useState(false)
   const [chipSelected, setChipSelected] = useState(false)
+  const dropdownRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setDropdownOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
 
   return (
-    <div data-theme={theme} className="min-h-screen bg-surface-primary text-content-primary">
+    <div data-theme={selectedTheme} className="min-h-screen bg-surface-primary text-content-primary">
       {/* Header with Theme Switcher */}
       <header className="sticky top-0 z-50 bg-surface-secondary shadow-sm">
         <div className="mx-auto max-w-5xl px-6 py-4 flex items-center justify-between">
           <h1 className="text-xl font-semibold">CHG Unified Design System</h1>
-          <div className="flex items-center gap-3">
-            <span className="text-sm text-content-secondary">Theme:</span>
-            <select
-              value={theme}
-              onChange={(e) => setTheme(e.target.value as Theme)}
-              className="rounded-lg bg-surface-primary px-3 py-2 text-sm border border-border-primary focus:outline-none focus:ring-2 focus:ring-interactive-primary"
+          <div ref={dropdownRef} className="relative">
+            <Button
+              variant="outline"
+              size="md"
+              onPress={() => setDropdownOpen(!dropdownOpen)}
             >
-              {themes.map((t) => (
-                <option key={t} value={t}>
-                  {t.charAt(0).toUpperCase() + t.slice(1)}
-                </option>
-              ))}
-            </select>
+              <span className="flex items-center gap-2">
+                <span
+                  className="size-3 rounded-full shrink-0"
+                  style={{ backgroundColor: brands.find(b => b.id === selectedTheme)?.color }}
+                />
+                {brands.find(b => b.id === selectedTheme)?.label}
+                <svg
+                  className={`w-4 h-4 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </Button>
+
+            {dropdownOpen && (
+              <ActionMenu
+                className="absolute right-0 mt-2 min-w-48 z-50"
+                onItemClick={(value) => {
+                  if (value) setSelectedTheme(value)
+                  setDropdownOpen(false)
+                }}
+              >
+                {brands.map((brand) => (
+                  <ActionMenu.Item key={brand.id} value={brand.id}>
+                    <span className="flex items-center gap-3">
+                      <span
+                        className="size-3 rounded-full shrink-0"
+                        style={{ backgroundColor: brand.color }}
+                      />
+                      {brand.label}
+                    </span>
+                  </ActionMenu.Item>
+                ))}
+              </ActionMenu>
+            )}
           </div>
         </div>
       </header>
