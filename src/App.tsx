@@ -133,8 +133,7 @@ function App() {
             a multi-brand React component library built with React Aria Components and Tailwind CSS 4.
           </p>
           <p className="text-gray-700 pb-12">
-            All components are imported from the <a href="https://www.npmjs.com/package/@oxymormon/chg-unified-ds" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:underline">@oxymormon/chg-unified-ds</a> NPM package and support runtime theme switching
-            via the <code className="bg-gray-200 px-4 py-2 rounded-4 text-sm">data-theme</code> attribute.
+            All components you see below are imported from the <a href="https://www.npmjs.com/package/@oxymormon/chg-unified-ds" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:underline">@oxymormon/chg-unified-ds</a> NPM package.
           </p>
           <div className="flex flex-wrap gap-8">
             <Button
