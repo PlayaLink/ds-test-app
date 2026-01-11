@@ -129,11 +129,13 @@ function App() {
         {/* About Section */}
         <section className="bg-gray-50 rounded-12 p-16 space-y-12">
           <p className="text-gray-700">
-            THis is a web app built with components from the <strong>CHG Unified Design System</strong>,
-            a multi-brand component library built with React Aria Components and Tailwind CSS 4 and powered by CHG's Unified Design System in Figma via Figma Code Connect.
+            This site is built with fully functional React components powered by CHG's Unified Design System library in Figma.
+          </p>
+          <p className="text-gray-700">
+            The components have minimal dependencies (React Aria Components and Tailwind CSS 4). All colors and CSS styles are generated from our design tokens in Figma. 
           </p>
           <p className="text-gray-700 pb-12">
-            All components you see below are imported from the NPM package <a href="https://www.npmjs.com/package/@oxymormon/chg-unified-ds" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:underline">@oxymormon/chg-unified-ds</a>, which pulls from the GitHub repo <a href="https://github.com/jordanchghealthcare/chg-unified-ds" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:underline">chg-unified-ds</a>. All components are fully documented in <a href="https://www.chg-unified-design.com/" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:underline">Storybook</a>.
+            The components you see below are imported from an NPM package, <a href="https://www.npmjs.com/package/@oxymormon/chg-unified-ds" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:underline">@oxymormon/chg-unified-ds</a>, which pulls from a GitHub repo, <a href="https://github.com/jordanchghealthcare/chg-unified-ds" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:underline">chg-unified-ds</a>. All components are fully documented in <a href="https://www.chg-unified-design.com/" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:underline">Storybook</a> and link back to Figma via Code Connect.
           </p>
           <div className="flex flex-wrap gap-8">
             <Button
@@ -159,8 +161,8 @@ function App() {
             >
               <span className="flex items-center gap-6">
                 <svg className="size-16" viewBox="0 0 64 64" fill="none">
-                  <path d="M8.42 58.97L6.4 6.15c-.07-1.75 1.3-3.22 3.08-3.33L55.31.01c1.81-.11 3.37 1.24 3.48 3.01v57.76c0 1.78-1.47 3.22-3.28 3.22l-43.94-1.93c-1.7-.08-3.07-1.42-3.13-3.1z" fill="#FF4785"/>
-                  <path fillRule="evenodd" clipRule="evenodd" d="M46.8 24.52c-1.16.88-9.76 1.48-9.76.23.18-4.78-2-4.99-3.21-4.99-1.15 0-3.09.34-3.09 2.9 0 2.61 2.83 4.08 6.16 5.81 4.72 2.45 10.44 5.43 10.44 12.9 0 7.17-5.94 11.13-13.51 11.13-7.82 0-14.65-3.1-13.88-13.85.3-1.26 10.24-.96 10.24 0-.12 4.44.92 5.74 3.52 5.74 2 0 2.91-1.08 2.91-2.9 0-2.75-2.95-4.38-6.35-6.25-4.6-2.53-10.01-5.51-10.01-12.35 0-6.82 4.79-11.37 13.33-11.37 8.55 0 13.21 4.48 13.21 13z" fill="white"/>
+                  <path d="M8.42 58.97L6.4 6.15c-.07-1.75 1.3-3.22 3.08-3.33L55.31.01c1.81-.11 3.37 1.24 3.48 3.01v57.76c0 1.78-1.47 3.22-3.28 3.22l-43.94-1.93c-1.7-.08-3.07-1.42-3.13-3.1z" fill="#FF4785" />
+                  <path fillRule="evenodd" clipRule="evenodd" d="M46.8 24.52c-1.16.88-9.76 1.48-9.76.23.18-4.78-2-4.99-3.21-4.99-1.15 0-3.09.34-3.09 2.9 0 2.61 2.83 4.08 6.16 5.81 4.72 2.45 10.44 5.43 10.44 12.9 0 7.17-5.94 11.13-13.51 11.13-7.82 0-14.65-3.1-13.88-13.85.3-1.26 10.24-.96 10.24 0-.12 4.44.92 5.74 3.52 5.74 2 0 2.91-1.08 2.91-2.9 0-2.75-2.95-4.38-6.35-6.25-4.6-2.53-10.01-5.51-10.01-12.35 0-6.82 4.79-11.37 13.33-11.37 8.55 0 13.21 4.48 13.21 13z" fill="white" />
                 </svg>
                 Storybook
               </span>
@@ -549,7 +551,7 @@ function App() {
               appearance="dot"
               dotAppearance="green"
               actions="close"
-              onClose={() => {}}
+              onClose={() => { }}
             />
             <Toast
               title="Warning: Low storage"
@@ -575,7 +577,7 @@ function App() {
               avatarProps={{ name: "Sarah Connor" }}
               size="condensed"
               actions="close"
-              onClose={() => {}}
+              onClose={() => { }}
             />
           </div>
         </Section>
