@@ -83,16 +83,17 @@ function App() {
               size="md"
               onPress={() => setDropdownOpen(!dropdownOpen)}
             >
-              <span className="flex items-center gap-6">
+              <span className="flex items-center gap-3">
                 <DotStatus appearance={brands.find(b => b.id === selectedTheme)?.dotAppearance} />
                 {brands.find(b => b.id === selectedTheme)?.label}
                 <svg
-                  className={`w-4 h-4 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+                  width="20"
+                  height="20"
+                  className={`transition-transform shrink-0 ${dropdownOpen ? 'rotate-180' : ''}`}
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
                 </svg>
               </span>
             </Button>
