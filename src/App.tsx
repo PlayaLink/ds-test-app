@@ -566,7 +566,7 @@ function App() {
               <ActionMenu.Item value="share">Share</ActionMenu.Item>
               <ActionMenu.Divider />
               <ActionMenu.Item value="archive">Archive</ActionMenu.Item>
-              <ActionMenu.Item value="delete" disabled>Delete</ActionMenu.Item>
+              <ActionMenu.Item value="delete">Delete</ActionMenu.Item>
             </ActionMenu>
           </div>
         </Section>
