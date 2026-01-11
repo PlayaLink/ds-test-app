@@ -28,5 +28,11 @@ Theme CSS is imported in `src/index.css` along with design system tokens.
 
 ### Key Files
 - `src/App.tsx` - Component showcase with theme switcher
-- `src/index.css` - Tailwind config and design system imports
+- `src/index.css` - Tailwind v4 config, design system tokens, and brand theme imports
 - `vite.config.ts` - Vite config with React and Tailwind plugins
+
+### CSS Setup
+The `src/index.css` file uses Tailwind CSS 4's new import syntax:
+- `@config` points to the design system's Tailwind config
+- `@import` loads tokens and individual brand themes
+- `@source` scans the design system package for Tailwind class usage
