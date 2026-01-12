@@ -129,10 +129,10 @@ function App() {
         {/* About Section */}
         <section className="bg-gray-50 rounded-12 p-16 space-y-12">
           <p className="text-gray-700">
-            This site is built with fully functional React components powered by CHG's <a href="https://www.figma.com/files/1034875891113199457/project/265020318/Unified-Design-System?fuid=1334211599582098160" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:underline">Unified Design System</a> library in Figma.
+            This site is built with fully functional React components powered by CHG's <a href="https://www.figma.com/files/1034875891113199457/project/265020318/Unified-Design-System?fuid=1334211599582098160" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:underline">Unified Design System</a> in Figma.
           </p>
           <p className="text-gray-700">
-            The components have minimal dependencies (React Aria Components and Tailwind CSS 4). All colors and CSS styles are generated from our design tokens in Figma. 
+            The components have minimal dependencies (React Aria Components and Tailwind CSS 4). All colors, CSS styles and React props are defined by design tokens and component variants in Figma. 
           </p>
           <p className="text-gray-700 pb-8">
             The components you see below are imported from an NPM package, <a href="https://www.npmjs.com/package/@oxymormon/chg-unified-ds" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:underline">@oxymormon/chg-unified-ds</a>, which pulls from a GitHub repo, <a href="https://github.com/jordanchghealthcare/chg-unified-ds" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:underline">chg-unified-ds</a>. All components are fully documented in <a href="https://www.chg-unified-design.com/" target="_blank" rel="noopener noreferrer" className="text-brand-600 hover:underline">Storybook</a> and link back to Figma via Code Connect.
