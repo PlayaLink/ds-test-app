@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides project runtime context for `ds-test-app`.
 
 ## Commands
 
@@ -17,22 +17,19 @@ This is a demo application for the `@oxymormon/chg-unified-ds` design system pac
 
 ### Tech Stack
 - Vite + React 19 + TypeScript
-- Tailwind CSS 4 (via @tailwindcss/vite plugin)
-- @oxymormon/chg-unified-ds components
+- Tailwind CSS 4 (via `@tailwindcss/vite`)
+- `@oxymormon/chg-unified-ds` components
 
 ### Theming
-The app supports 6 CHG brand themes controlled via `data-theme` attribute on the root element:
-- weatherby, comphealth, connect, locumsmart, modio, wireframe
-
-Theme CSS is imported in `src/index.css` along with design system tokens.
+The app supports six CHG brand themes via `data-theme` on the root element:
+`weatherby`, `comphealth`, `connect`, `locumsmart`, `modio`, `wireframe`.
 
 ### Key Files
-- `src/App.tsx` - Component showcase with theme switcher
-- `src/index.css` - Tailwind v4 config, design system tokens, and brand theme imports
-- `vite.config.ts` - Vite config with React and Tailwind plugins
+- `src/App.tsx` component showcase with theme switcher
+- `src/index.css` Tailwind v4 config, tokens, and brand theme imports
+- `vite.config.ts` Vite config with React and Tailwind plugins
 
-### CSS Setup
-The `src/index.css` file uses Tailwind CSS 4's new import syntax:
-- `@config` points to the design system's Tailwind config
-- `@import` loads tokens and individual brand themes
-- `@source` scans the design system package for Tailwind class usage
+## Instruction Sources
+
+- Agent behavior/process rules are inherited from `/Users/jengland/claude/chg/AGENTS.md`.
+- Keep this file focused on runtime and architecture context.
